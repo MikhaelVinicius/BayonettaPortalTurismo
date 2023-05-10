@@ -12,7 +12,7 @@ function Nav() {
       </div>
       <ul className="main-menu">
         <li><Link to="/pontos-turisticos">Pontos Turísticos</Link></li>
-        <li><Link to="/hoteis">Hospedagens</Link></li>
+        <li><Link to="/hospedagens">Hospedagens</Link></li>
         <li><Link to="/restaurantes">Restaurantes</Link></li>
         <li><Link to="/atividades">Atividades</Link></li>
         <li><Link to="/eventos">Eventos</Link></li>
