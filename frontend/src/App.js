@@ -10,6 +10,7 @@ import RestauranteList from './pages/RestauranteList';
 import AtividadeDetalhes from './pages/AtividadeDetalhes';
 import EventoDetalhe from './pages/EventoDetalhe';
 import HospedagemDetalhes from './pages/HospedagemDetalhe';
+import RestauranteDetalhe from './pages/RestauranteDetalhe';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/atividades/:id" component={AtividadeDetalhes} />
         <Route path="/eventos/:id" component={EventoDetalhe} />
         <Route path="/hospedagens/:id" component={HospedagemDetalhes} />
+        <Route path="/restaurantes/:id" component={RestauranteDetalhe} />
       </Switch>
     </Router>
   );
