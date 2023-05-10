@@ -26,12 +26,18 @@ function HospedagemDetalhes(props) {
       </header>
       <div className="imagem">
         <img src={hospedagem.url_imagem_1} alt={hospedagem.nome} />
+        <p>Estrelas: {hospedagem.estrelas}</p>
+        <p>Tipo: {hospedagem.tipo}</p>
+        <p>Website: {hospedagem.website}</p>
+        <p>Telefone: {hospedagem.telefone}</p>
+        <p>Email: {hospedagem.email}</p>
+        <p>Endereço: {hospedagem.endereco}</p>
+       
       </div>
       <div className="info">
         <h1>{hospedagem.nome}</h1>
         <p>{hospedagem.descricao}</p>
-        <p>{hospedagem.localizacao}</p>
-        <p>{hospedagem.tipo}</p>
+        
       </div>
     </div>
   );

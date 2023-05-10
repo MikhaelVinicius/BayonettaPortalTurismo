@@ -26,13 +26,17 @@ function EventoDetalhe(props) {
       </header>
       <div className="imagem">
         <img src={eventos.imagem1} alt={eventos.nome} />
+        <p>Telefone: {eventos.telefone}</p>
+        <p>Website: {eventos.website}</p>
+        <p>Email: {eventos.email}</p>
+        <p>Endereço: {eventos.endereco}</p>
+        <p>Horario de abertura: {eventos.horario_abertura}</p>
+        <p>Horario de fechamento: {eventos.horario_fechamento}</p>
       </div>
       <div className="info">
         <h1>{eventos.nome}</h1>
         <p>{eventos.descricao}</p>
-        <p>{eventos.localizacao}</p>
-        <p>{eventos.horario_abertura}</p>
-        <p>{eventos.horario_fechamento}</p>
+       
       </div>
     </div>
   );

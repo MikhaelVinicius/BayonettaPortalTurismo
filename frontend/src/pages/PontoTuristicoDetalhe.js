@@ -26,11 +26,16 @@ function PontoTuristicoDetalhe(props) {
       </header>
       <div className="imagem">
         <img src={pontoTuristico.url_imagem_1} alt={pontoTuristico.nome} />
+        
+        <p>Telefone: {pontoTuristico.telefone}</p>
+        <p>Email: {pontoTuristico.email}</p>
+        <p>Endereço: {pontoTuristico.endereco}</p>
+        <p>Horário de funcionamento: {pontoTuristico.horario_funcionamento}</p>
       </div>
       <div className="info">
         <h1>{pontoTuristico.nome}</h1>
         <p>{pontoTuristico.descricao}</p>
-        <p>{pontoTuristico.localizacao}</p>
+    
         
       </div>
     </div>

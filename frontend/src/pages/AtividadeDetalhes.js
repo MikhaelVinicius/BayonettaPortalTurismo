@@ -26,12 +26,15 @@ function AtividadeDetalhes(props) {
       </header>
       <div className="imagem">
         <img src={atividade.url_imagem_1} alt={atividade.nome} />
+        <p>Telefone: {atividade.telefone}</p>
+        <p>Email: {atividade.email}</p>
+        <p>Endereço: {atividade.endereco}</p>
+        <p>Horario de funcionamento: {atividade.horario_funcionamento}</p>
       </div>
       <div className="info">
         <h1>{atividade.nome}</h1>
         <p>{atividade.descricao}</p>
-        <p>{atividade.localizacao}</p>
-        <p>{atividade.horario_funcionamento}</p>
+       
       </div>
     </div>
   );

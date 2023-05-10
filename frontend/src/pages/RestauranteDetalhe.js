@@ -26,12 +26,16 @@ function RestauranteDetalhe(props) {
       </header>
       <div className="imagem">
         <img src={restaurante.imagem1} alt={restaurante.nome} />
+        <p>Telefone: {restaurante.telefone}</p>
+        <p>Email: {restaurante.email}</p>
+        <p>Endereço: {restaurante.endereco}</p>
+        <p>Website: {restaurante.website}</p>
+        <p>Horario de funcionamento: {restaurante.horario_funcionamento}</p>
       </div>
       <div className="info">
         <h1>{restaurante.nome}</h1>
         <p>{restaurante.descricao}</p>
-        <p>{restaurante.localizacao}</p>
-        <p>{restaurante.tipo}</p>
+      
       </div>
     </div>
   );
