@@ -5,6 +5,7 @@ from flask_login import login_required
 from flask import Flask, request
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+from flask_cors import CORS
 
 
 
@@ -12,6 +13,7 @@ from flask_admin.contrib.sqla import ModelView
 
 
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://Bayonetta:$Mika2023@127.0.0.1/portal_de_turismo'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'Bayonetta'
@@ -376,7 +378,7 @@ def get_pontos_turisticos():
     return jsonify([ponto_turistico.to_dict() for ponto_turistico in pontos_turisticos])
 
 @app.route('/api/pontos_turisticos/<int:id>', methods=['GET'])
-def get_pontos_turisticos(id):
+def get_ponto_turistico(id):
     ponto_turistico = PontoTuristico.query.get(id)
     if ponto_turistico is None:
         return jsonify({'erro': 'Ponto turístico não encontrada'}), 404
@@ -390,7 +392,7 @@ def get_hospedagens():
     return jsonify([hospedagem.to_dict() for hospedagem in hospedagens])
 
 @app.route('/api/hospedagens/<int:id>', methods=['GET'])
-def get_hospedagens(id):
+def get_hospedagem(id):
     hospedagem = Hospedagem.query.get(id)
     if hospedagem is None:
         return jsonify({'erro': 'Hospedagem não encontrada'}), 404
@@ -404,7 +406,7 @@ def get_restaurantes():
     return jsonify([restaurante.to_dict() for restaurante in restaurantes])
 
 @app.route('/api/restaurantes/<int:id>', methods=['GET'])
-def get_restaurantes(id):
+def get_restaurante(id):
     restaurante = Restaurante.query.get(id)
     if restaurante is None:
         return jsonify({'erro': 'Restaurante não encontrada'}), 404
@@ -417,7 +419,7 @@ def get_eventos():
     return jsonify([evento.to_dict() for evento in eventos])
 
 @app.route('/api/eventos/<int:id>', methods=['GET'])
-def get_eventos(id):
+def get_evento(id):
     evento = Evento.query.get(id)
     if evento is None:
         return jsonify({'erro': 'Evento não encontrada'}), 404

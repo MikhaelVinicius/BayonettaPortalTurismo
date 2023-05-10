@@ -15,7 +15,7 @@ function Homepage() {
       </header>
       <main>
         <h1>Bem-vindo ao Portal de Turismo</h1>
-        <p>Encontre os melhores destinos, hospedagens, restaurantes e atividades turísticas .</p>
+        <p>Encontre os melhores destinos, hospedagens, restaurantes e atividades turísticas.</p>
         <button  className="cta-btn">Explorar</button>
       </main>
       
