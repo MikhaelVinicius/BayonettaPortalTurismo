@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
+import Comentarios from '../components/comentarios';
 
 function RestauranteDetalhe(props) {
   const [restaurante, setRestaurante] = useState(null);
@@ -35,7 +36,9 @@ function RestauranteDetalhe(props) {
       <div className="info">
         <h1>{restaurante.nome}</h1>
         <p>{restaurante.descricao}</p>
-      
+        <div className="comentario">
+      <Comentarios/>
+      </div>
       </div>
     </div>
   );

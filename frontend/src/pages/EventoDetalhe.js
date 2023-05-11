@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
+import Comentarios from '../components/comentarios';
 
 function EventoDetalhe(props) {
   const [eventos, setEventos] = useState(null);
@@ -36,8 +37,12 @@ function EventoDetalhe(props) {
       <div className="info">
         <h1>{eventos.nome}</h1>
         <p>{eventos.descricao}</p>
-       
+        <div className="comentario">
+      <Comentarios/>
       </div>
+      </div>
+     
+
     </div>
   );
 }

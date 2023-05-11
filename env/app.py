@@ -423,6 +423,24 @@ def get_evento(id):
     return jsonify(evento.to_dict())
 
 
+@app.route('/api/comentarios', methods=['GET', 'POST'])
+def comentarios():
+    if request.method == 'GET':
+        comentarios = Comentario.query.all()
+        comentarios_dict = [c.to_dict() for c in comentarios]
+        return jsonify(comentarios_dict)
+    elif request.method == 'POST':
+        nome = request.json['nome']
+        email = request.json['email']
+        comentario = request.json['comentario']
+        
+        novo_comentario = Comentario(nome=nome, email=email, comentario=comentario)
+        db.session.add(novo_comentario)
+        db.session.commit()
+        
+        return jsonify({'message': 'Comentário criado com sucesso!'})
+
+
 admin = Admin(app, name='Admin', template_mode='bootstrap3')
 admin.add_view(ModelView(PontoTuristico, db.session))
 admin.add_view(ModelView(Atividades, db.session))

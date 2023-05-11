@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
+import Comentarios from '../components/comentarios';
 
 function PontoTuristicoDetalhe(props) {
   const [pontoTuristico, setPontoTuristico] = useState(null);
@@ -35,7 +36,9 @@ function PontoTuristicoDetalhe(props) {
       <div className="info">
         <h1>{pontoTuristico.nome}</h1>
         <p>{pontoTuristico.descricao}</p>
-    
+        <div className="comentario">
+      <Comentarios/>
+      </div>
         
       </div>
     </div>
