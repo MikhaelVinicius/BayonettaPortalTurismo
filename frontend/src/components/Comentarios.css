@@ -1,46 +1,72 @@
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  input,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .comment {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
-  .comment p {
-    margin: 5px 0;
-  }
-  
-  .comment p:first-child {
-    font-weight: bold;
-  }
-  
-  .comment p:last-child {
-    font-size: 12px;
-    color: #888;
-  }
-  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.comment {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.comment p {
+  margin: 5px 0;
+}
+
+.comment p:first-child {
+  font-weight: bold;
+}
+
+.comment p:last-child {
+  font-size: 12px;
+  color: #888;
+}
+
+.poster {
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.poster div {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.poster p {
+  margin: 5px 0;
+}
+
+.poster p:first-child {
+  font-weight: bold;
+}
+
+.poster p:last-child {
+  font-size: 12px;
+  color: #888;
+}

@@ -14,7 +14,7 @@ function Comentarios() {
 
   const fetchComentarios = async () => {
     try {
-      const response = await axios.get('/api/comentarios');
+      const response = await axios.get('http://127.0.0.1:5000/api/comentarios');
       setComentarios(response.data);
     } catch (error) {
       console.log(error);
@@ -23,26 +23,28 @@ function Comentarios() {
 
   const postComentario = async () => {
     try {
-      await axios.post('/api/comentarios', {
+      const response = await axios.post('http://127.0.0.1:5000/api/comentarios', {
         nome: nome,
         email: email,
         comentario: comentario
       });
-      fetchComentarios();
-      setNome('');
-      setEmail('');
-      setComentario('');
+      if (response.status === 201) {
+        fetchComentarios();
+        setNome('');
+        setEmail('');
+        setComentario('');
+      }
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <div  className="container">
+    <div className="container">
       <h1>Comentários</h1>
       <div>
         <input
-          type="text"
+          type="nome"
           placeholder="Nome"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
@@ -60,7 +62,7 @@ function Comentarios() {
         ></textarea>
         <button onClick={postComentario}>Postar Comentário</button>
       </div>
-      <div>
+      <div className='poster'>
         {comentarios.map((comentario) => (
           <div key={comentario.id}>
             <p>{comentario.nome}</p>
