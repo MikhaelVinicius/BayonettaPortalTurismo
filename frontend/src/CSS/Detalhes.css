@@ -22,6 +22,10 @@
 .detalhes .imagem p {
   margin-left: 100px;
   text-align: center;
+  
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .detalhes .info {
