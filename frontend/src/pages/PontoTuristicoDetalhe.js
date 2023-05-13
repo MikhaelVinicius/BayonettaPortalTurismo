@@ -61,10 +61,20 @@ function PontoTuristicoDetalhe(props) {
             <img src={pontoTuristico.url_imagem_2} alt={pontoTuristico.nome} />
           </div>
         </div>
-        <p>Telefone: {pontoTuristico.telefone}</p>
-        <p>Email: {pontoTuristico.email}</p>
-        <p>Endereço: {pontoTuristico.endereco}</p>
-        <p>Horário de funcionamento: {pontoTuristico.horario_funcionamento}</p>
+        <p> <i className="fas fa-phone">  </i> { pontoTuristico.telefone}</p>
+<p>
+  <i className="fas fa-envelope"></i>
+   {pontoTuristico.email}
+</p>
+<p>
+  <i className="fas fa-map-marker-alt"></i>
+  {pontoTuristico.endereco}
+</p>
+<p>
+  <i className="fas fa-clock"></i>  
+  Horário de funcionamento: {pontoTuristico.horario_funcionamento}
+</p>
+
       </div>
 
       <div id="map"></div>

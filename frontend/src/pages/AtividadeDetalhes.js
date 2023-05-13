@@ -58,10 +58,23 @@ function AtividadeDetalhes(props) {
             <img src={atividade.url_imagem_2} alt={atividade.nome} />
           </div>
         </div>
-        <p>Telefone: {atividade.telefone}</p>
-        <p>Email: {atividade.email}</p>
-        <p>Endereço: {atividade.endereco}</p>
-        <p>Horario de funcionamento: {atividade.horario_funcionamento}</p>
+        <p>
+  <i className="fas fa-phone"></i>
+  Telefone: {atividade.telefone}
+</p>
+<p>
+  <i className="fas fa-envelope"></i>
+  Email: {atividade.email}
+</p>
+<p>
+  <i className="fas fa-map-marker-alt"></i>
+  Endereço: {atividade.endereco}
+</p>
+<p>
+  <i className="fas fa-clock"></i>
+  Horário de funcionamento: {atividade.horario_funcionamento}
+</p>
+
       </div>
       <div className="info">
         <h1>{atividade.nome}</h1>

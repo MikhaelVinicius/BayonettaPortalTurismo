@@ -58,12 +58,31 @@ function EventoDetalhe(props) {
             <img src={eventos.imagem2} alt={eventos.nome} />
           </div>
         </div>
-        <p>Telefone: {eventos.telefone}</p>
-        <p>Website: {eventos.website}</p>
-        <p>Email: {eventos.email}</p>
-        <p>Endereço: {eventos.endereco}</p>
-        <p>Horario de abertura: {eventos.horario_abertura}</p>
-        <p>Horario de fechamento: {eventos.horario_fechamento}</p>
+        <p>
+  <i className="fas fa-phone"></i>
+  Telefone: {eventos.telefone}
+</p>
+<p>
+  <i className="fas fa-globe"></i>
+  Website: {eventos.website}
+</p>
+<p>
+  <i className="fas fa-envelope"></i>
+  Email: {eventos.email}
+</p>
+<p>
+  <i className="fas fa-map-marker-alt"></i>
+  Endereço: {eventos.endereco}
+</p>
+<p>
+  <i className="far fa-clock"></i>
+  Horário de abertura: {eventos.horario_abertura}
+</p>
+<p>
+  <i className="far fa-clock"></i>
+  Horário de fechamento: {eventos.horario_fechamento}
+</p>
+
       </div>
       <div className="info">
         <h1>{eventos.nome}</h1>

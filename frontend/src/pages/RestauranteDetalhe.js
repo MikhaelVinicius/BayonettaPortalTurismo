@@ -59,11 +59,27 @@ function RestauranteDetalhe(props) {
             <img src={restaurante.imagem2} alt={restaurante.nome} />
           </div>
         </div>
-        <p>Telefone: {restaurante.telefone}</p>
-        <p>Email: {restaurante.email}</p>
-        <p>Endereço: {restaurante.endereco}</p>
-        <p>Website: {restaurante.website}</p>
-        <p>Horario de funcionamento: {restaurante.horario_funcionamento}</p>
+        <p>
+  <i className="fas fa-phone"></i>
+  Telefone: {restaurante.telefone}
+</p>
+<p>
+  <i className="fas fa-envelope"></i>
+  Email: {restaurante.email}
+</p>
+<p>
+  <i className="fas fa-map-marker-alt"></i>
+  Endereço: {restaurante.endereco}
+</p>
+<p>
+  <i className="fas fa-globe"></i>
+  Website: {restaurante.website}
+</p>
+<p>
+  <i className="fas fa-clock"></i>
+  Horário de funcionamento: {restaurante.horario_funcionamento}
+</p>
+
       </div>
       <div className="info">
         <h1>{restaurante.nome}</h1>

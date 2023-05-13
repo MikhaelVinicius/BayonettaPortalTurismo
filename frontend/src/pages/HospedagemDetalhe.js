@@ -56,12 +56,31 @@ function HospedagemDetalhes(props) {
             <img src={hospedagem.url_imagem_2} alt={hospedagem.nome} />
           </div>
         </div>
-        <p>Estrelas: {hospedagem.estrelas}</p>
-        <p>Tipo: {hospedagem.tipo}</p>
-        <p>Website: {hospedagem.website}</p>
-        <p>Telefone: {hospedagem.telefone}</p>
-        <p>Email: {hospedagem.email}</p>
-        <p>Endereço: {hospedagem.endereco}</p>
+        <p>
+  <i className="fas fa-star"></i>
+  Estrelas: {hospedagem.estrelas}
+</p>
+<p>
+  <i className="fas fa-hotel"></i>
+  Tipo: {hospedagem.tipo}
+</p>
+<p>
+  <i className="fas fa-globe"></i>
+  Website: {hospedagem.website}
+</p>
+<p>
+  <i className="fas fa-phone"></i>
+  Telefone: {hospedagem.telefone}
+</p>
+<p>
+  <i className="fas fa-envelope"></i>
+  Email: {hospedagem.email}
+</p>
+<p>
+  <i className="fas fa-map-marker-alt"></i>
+  Endereço: {hospedagem.endereco}
+</p>
+
        
       </div>
       <div className="info">
