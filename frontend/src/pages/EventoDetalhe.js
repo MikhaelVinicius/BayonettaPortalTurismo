@@ -1,11 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
 
+import $ from 'jquery';
+
+
+import  '../../node_modules/slick-carousel/slick/slick.css';
+import '../../node_modules/slick-carousel/slick/slick-theme.css';
+import '../../node_modules/slick-carousel/slick/slick.js';
+
 function EventoDetalhe(props) {
   const [eventos, setEventos] = useState(null);
+  const slickRef = useRef(null);
 
   useEffect(() => {
     axios.get(`http://127.0.0.1:5000/api/eventos/${props.match.params.id}`).then(response => {
@@ -15,6 +23,22 @@ function EventoDetalhe(props) {
         console.log(error);
       });
   }, [props.match.params.id]);
+
+  useEffect(() => {
+    if (slickRef.current && eventos) {
+      const initSlick = () => {
+        $(".slider").not('.slick-initialized').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+      };
+
+      setTimeout(initSlick, 100);
+    }
+  }, [slickRef, eventos]);
 
   if (!eventos) {
     return <div>Carregando...</div>;
@@ -26,7 +50,14 @@ function EventoDetalhe(props) {
         <Nav /> 
       </header>
       <div className="imagem">
-        <img src={eventos.imagem1} alt={eventos.nome} />
+      <div className="slider" ref={slickRef}>
+          <div>
+            <img src={eventos.imagem1} alt={eventos.nome} />
+          </div>
+          <div>
+            <img src={eventos.imagem2} alt={eventos.nome} />
+          </div>
+        </div>
         <p>Telefone: {eventos.telefone}</p>
         <p>Website: {eventos.website}</p>
         <p>Email: {eventos.email}</p>
