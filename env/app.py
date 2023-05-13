@@ -439,6 +439,17 @@ def comentarios():
         db.session.commit()
         
         return jsonify({'message': 'Comentário criado com sucesso!'})
+    
+@app.route('/api/search')
+def search():
+    term = request.args.get('term')
+
+    results = [
+        {'title': 'Resultado 1', 'url': '/resultado-1'},
+        {'title': 'Resultado 2', 'url': '/resultado-2'},
+        # ...
+    ]
+    return jsonify(results)   
 
 
 admin = Admin(app, name='Admin', template_mode='bootstrap3')
