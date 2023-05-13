@@ -12,12 +12,24 @@
 }
 
 .detalhes .imagem img {
-  width: 100%;
+  width: 500px;
   height: auto;
   border-radius: 8px;
   margin-left: 50px;
   margin-top: 100px;
 }
+
+.detalhes .imagem .slider {
+  width:600px;
+  height: 400px; /* Ajuste a altura conforme necessário */
+  position: relative;
+  overflow: hidden;
+  margin-left: 140px;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+}
+
 
 .detalhes .imagem p {
   margin-left: 100px;
@@ -65,3 +77,4 @@
   
 
 }
+
