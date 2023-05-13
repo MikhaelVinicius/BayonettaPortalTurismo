@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
+import Footer from '../components/footer';
 
 import $ from 'jquery';
 
@@ -85,6 +86,7 @@ function PontoTuristicoDetalhe(props) {
           <Comentarios />
         </div>
       </div>
+      
     </div>
   );
 }

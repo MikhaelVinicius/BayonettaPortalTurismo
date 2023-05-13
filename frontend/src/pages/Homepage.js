@@ -4,6 +4,7 @@ import '../CSS/Homepage.css';
 import App from '../App';
 import Nav from '../components/Nav'; 
 import PontoTuristicoList from './PontoTuristicoList';
+import Footer from '../components/footer';
 
 function Homepage() {
 
@@ -29,6 +30,7 @@ function Homepage() {
       <div ref={pontoTuristicoListRef}>
         <PontoTuristicoList />
       </div>
+      <Footer/>
   </div>
     );
   }

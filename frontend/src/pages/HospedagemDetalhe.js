@@ -4,7 +4,7 @@ import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
 import $ from 'jquery';
-
+import Footer from '../components/footer';
 import  '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
 import '../../node_modules/slick-carousel/slick/slick.js';
@@ -90,6 +90,8 @@ function HospedagemDetalhes(props) {
       <Comentarios/>
       </div>
       </div>
+     
+      
     </div>
   );
 }

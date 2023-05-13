@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav'; 
+import Footer from '../components/footer';
 
 function RestauranteList() {
     const [restaurantes, setRestaurantes] = useState([]);
@@ -41,6 +42,7 @@ function RestauranteList() {
             </div>
           </div>
         ))}
+       
       </div>
     );
   }

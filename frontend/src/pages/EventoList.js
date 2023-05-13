@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
+import Footer from '../components/footer';
 import Nav from '../components/Nav'; 
 
 
@@ -44,6 +45,7 @@ function EventoList() {
               </div>
             </div>
           ))}
+        
         </div>
       );
     }
