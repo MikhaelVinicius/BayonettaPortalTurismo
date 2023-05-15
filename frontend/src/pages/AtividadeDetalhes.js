@@ -4,6 +4,9 @@ import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
+import Maps from '../components/Maps';
+
+
 
 import $ from 'jquery';
 
@@ -11,13 +14,17 @@ import $ from 'jquery';
 import  '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
 import '../../node_modules/slick-carousel/slick/slick.js';
+
+
 function AtividadeDetalhes(props) {
   const [atividade, setAtividade] = useState(null);
   const slickRef = useRef(null);
   
 
+
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/api/atividades/${props.match.params.id}`).then(response => {
+    axios.get(`http://127.0.0.1:5000/api/atividades/${props.match.params.id}`)
+      .then(response => {
         setAtividade(response.data);
       })
       .catch(error => {
@@ -45,13 +52,15 @@ function AtividadeDetalhes(props) {
     return <div>Carregando...</div>;
   }
 
+
+
   return (
     <div className="detalhes">
       <header>
-        <Nav /> 
+        <Nav />
       </header>
       <div className="imagem">
-      <div className="slider" ref={slickRef}>
+        <div className="slider" ref={slickRef}>
           <div>
             <img src={atividade.url_imagem_1} alt={atividade.nome} />
           </div>
@@ -60,31 +69,31 @@ function AtividadeDetalhes(props) {
           </div>
         </div>
         <p>
-  <i className="fas fa-phone"></i>
-  Telefone: {atividade.telefone}
-</p>
-<p>
-  <i className="fas fa-envelope"></i>
-  Email: {atividade.email}
-</p>
-<p>
-  <i className="fas fa-map-marker-alt"></i>
-  Endereço: {atividade.endereco}
-</p>
-<p>
-  <i className="fas fa-clock"></i>
-  Horário de funcionamento: {atividade.horario_funcionamento}
-</p>
-
+          <i className="fas fa-phone"></i>
+          Telefone: {atividade.telefone}
+        </p>
+        <p>
+          <i className="fas fa-envelope"></i>
+          Email: {atividade.email}
+        </p>
+        <p>
+          <i className="fas fa-map-marker-alt"></i>
+          Endereço: {atividade.endereco}
+        </p>
+        <p>
+          <i className="fas fa-clock"></i>
+          Horário de funcionamento: {atividade.horario_funcionamento}
+        </p> 
+        <Maps address = {atividade.endereco}/>
+        
       </div>
       <div className="info">
         <h1>{atividade.nome}</h1>
         <p>{atividade.descricao}</p>
         <div className="comentario">
-      <Comentarios/>
+          <Comentarios />
+        </div>
       </div>
-      </div>
-    
     </div>
   );
 }
