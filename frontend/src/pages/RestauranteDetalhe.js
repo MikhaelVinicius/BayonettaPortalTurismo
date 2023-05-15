@@ -4,7 +4,7 @@ import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
-
+import Maps from '../components/Maps';
 import $ from 'jquery';
 
 
@@ -80,6 +80,7 @@ function RestauranteDetalhe(props) {
   <i className="fas fa-clock"></i>
   Horário de funcionamento: {restaurante.horario_funcionamento}
 </p>
+<Maps address = {restaurante.endereco}/>
 
       </div>
       <div className="info">

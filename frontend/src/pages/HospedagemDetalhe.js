@@ -8,6 +8,7 @@ import Footer from '../components/footer';
 import  '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
 import '../../node_modules/slick-carousel/slick/slick.js';
+import Maps from '../components/Maps';
 
 function HospedagemDetalhes(props) {
   const [hospedagem, setHospedagem] = useState(null);
@@ -80,7 +81,7 @@ function HospedagemDetalhes(props) {
   <i className="fas fa-map-marker-alt"></i>
   Endereço: {hospedagem.endereco}
 </p>
-
+<Maps address = {hospedagem.endereco}/>
        
       </div>
       <div className="info">

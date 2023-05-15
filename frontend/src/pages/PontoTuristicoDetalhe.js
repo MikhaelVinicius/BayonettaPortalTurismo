@@ -6,7 +6,7 @@ import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
 
 import $ from 'jquery';
-
+import Maps from '../components/Maps';
 
 import  '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
@@ -75,10 +75,11 @@ function PontoTuristicoDetalhe(props) {
   <i className="fas fa-clock"></i>  
   Horário de funcionamento: {pontoTuristico.horario_funcionamento}
 </p>
+<Maps address = {pontoTuristico.endereco}/>
 
       </div>
 
-      <div id="map"></div>
+      
       <div className="info">
         <h1>{pontoTuristico.nome}</h1>
         <p>{pontoTuristico.descricao}</p>

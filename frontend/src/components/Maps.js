@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
-import './Maps.css'; // Importação do arquivo CSS
+import './Maps.css'; 
 
 const google = window.google;
 

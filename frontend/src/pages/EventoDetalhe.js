@@ -4,7 +4,7 @@ import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
-
+import Maps from '../components/Maps';
 import $ from 'jquery';
 
 
@@ -83,6 +83,8 @@ function EventoDetalhe(props) {
   <i className="far fa-clock"></i>
   Horário de fechamento: {eventos.horario_fechamento}
 </p>
+
+<Maps address = {eventos.endereco}/>
 
       </div>
       <div className="info">
