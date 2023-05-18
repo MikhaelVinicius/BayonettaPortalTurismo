@@ -4,7 +4,8 @@ body {
     padding: 0px;
     
     font-family: 'Roboto', sans-serif;
-  
+    background-color: #fff;
+    color: #000;
    
    
   }
@@ -12,7 +13,29 @@ body {
   
   
    Definindo o estilo do cabeçalho 
+  header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
 
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  
   
 
   

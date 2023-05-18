@@ -33,7 +33,7 @@ function Homepage() {
       <img class="d-block w-100" src="https://mediaim.expedia.com/destination/1/255802739e639a1f610362ba2a9b30e8.jpg" alt="First slide"/>
       <div class="carousel-caption d-none d-md-block">
       <h1>Bem-vindo ao Portal de Turismo</h1>
-        
+        <p>Encontre os melhores destinos, hospedagens, restaurantes e atividades turísticas.</p>
         <button onClick={scrollToPontoTuristicoList}   className="cta-btn">Explorar</button>
       </div>
     </div>
