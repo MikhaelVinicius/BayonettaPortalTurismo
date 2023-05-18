@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
-import Nav from '../components/Nav'; 
+import Nav from '../components/Nav2'; 
 import Footer from '../components/footer';
 
 

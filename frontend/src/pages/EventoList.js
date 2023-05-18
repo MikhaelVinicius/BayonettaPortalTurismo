@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
 import Footer from '../components/footer';
-import Nav from '../components/Nav'; 
+import Nav from '../components/Nav2'; 
 
 
 
