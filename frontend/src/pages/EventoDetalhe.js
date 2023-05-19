@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import '../CSS/Detalhes.css';
-import Nav from '../components/Nav2'; 
+import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
 import Maps from '../components/Maps';

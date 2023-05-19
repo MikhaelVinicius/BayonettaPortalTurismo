@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
-import Nav from '../components/Nav2'; 
+import Nav from '../components/Nav'; 
 import Footer from '../components/footer';
 
 function AtividadeList() {
