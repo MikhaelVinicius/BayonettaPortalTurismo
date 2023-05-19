@@ -501,7 +501,7 @@ admin.add_view(ModelView(Evento, db.session))
 admin.add_view(ModelView(Restaurante, db.session))
 admin.add_view(ModelView(Hospedagem, db.session))
 admin.add_view(ModelView(Comentario, db.session))
-
+admin.add_view(ModelView(Noticia, db.session))
 
 if __name__ == '__main__':
     app.config['DEBUG'] = True
