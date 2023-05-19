@@ -270,6 +270,35 @@ class Restaurante(db.Model):
             "website": self.website
         }
 
+
+class Noticia(db.Model):
+    __tablename__ = 'noticia'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    titulo = db.Column(db.String(255))
+    descricao = db.Column(db.Text)
+    autor = db.Column(db.String(100))
+    data_postagem = db.Column(db.Date)
+    imagem1 = db.Column(db.String(255))
+    imagem2 = db.Column(db.String(255))
+    imagem3 = db.Column(db.String(255))
+    video1 = db.Column(db.String(255))
+    video2 = db.Column(db.String(255))
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "titulo": self.titulo,
+            "descricao": self.descricao,
+            "autor": self.autor,
+            "data_postagem": self.data_postagem.strftime("%Y-%m-%d") if self.data_postagem else None,
+            "imagem1": self.imagem1,
+            "imagem2": self.imagem2,
+            "imagem3": self.imagem3,
+            "video1": self.video1,
+            "video2": self.video2
+        }
+
+
 class Comentario(db.Model):
     __tablename__ = 'comentarios'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -450,6 +479,19 @@ def search():
         # ...
     ]
     return jsonify(results)   
+
+@app.route('/api/noticias', methods=['GET'])
+def get_noticias():
+    noticias = Noticia.query.all()
+    return jsonify([noticia.to_dict() for noticia in noticias])
+
+
+@app.route('/api/noticias/<int:id>', methods=['GET'])
+def get_noticia(id):
+    noticia = Noticia.query.get(id)
+    if noticia is None:
+        return jsonify({'erro': 'Notícia não encontrada'}), 404
+    return jsonify(noticia.to_dict())
 
 
 admin = Admin(app, name='Admin', template_mode='bootstrap3')

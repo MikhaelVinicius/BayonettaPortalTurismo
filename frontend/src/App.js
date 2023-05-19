@@ -12,6 +12,7 @@ import EventoDetalhe from './pages/EventoDetalhe';
 import HospedagemDetalhes from './pages/HospedagemDetalhe';
 import RestauranteDetalhe from './pages/RestauranteDetalhe';
 import PontoTuristicoDetalhe from './pages/PontoTuristicoDetalhe';
+import NoticiasList from './pages/NoticiasList';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/eventos" component={EventoList} />
         <Route exact path="/hospedagens" component={HospedagemList} />
         <Route exact path="/restaurantes" component={RestauranteList} />
+        <Route exact path="/noticias" component={NoticiasList} />
         <Route path="/atividades/:id" component={AtividadeDetalhes} />
         <Route path="/eventos/:id" component={EventoDetalhe} />
         <Route path="/hospedagens/:id" component={HospedagemDetalhes} />

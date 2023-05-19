@@ -53,6 +53,9 @@ function Nav() {
             <li className="nav-item">
               <Link to="/eventos" className="nav-link">Eventos</Link>
             </li>
+            <li className="nav-item">
+              <Link to="/noticias" className="nav-link">Notícias</Link>
+            </li>
           </ul>
         </div>
       </div>

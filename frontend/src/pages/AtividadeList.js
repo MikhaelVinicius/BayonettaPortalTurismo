@@ -6,6 +6,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/footer';
 import atividade from "../logos/atividade.png";
 
+
 function AtividadeList() {
   const [atividades, setAtividades] = useState([]);
 
