@@ -7,6 +7,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #fff;
     color: #000;
+    
 }
 
 .pt-list {
@@ -22,6 +23,7 @@ body {
     }
   
   .pt-card {
+    margin-left: 40px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -61,10 +63,12 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
-    position: absolute;
+    margin-bottom: 30px;
+    margin-left: 200px;
     bottom: 20px;
     right: 20px;
     transition: all 0.3s ease-in-out;
+    
   }
   
   .pt-card .cta-btn:hover {
