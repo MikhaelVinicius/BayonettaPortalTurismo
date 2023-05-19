@@ -34,7 +34,7 @@ function Homepage() {
       <div class="carousel-caption d-none d-md-block">
       <h1>Bem-vindo ao Portal de Turismo</h1>
       
-        <button onClick={scrollToPontoTuristicoList}   className="cta-btn">Explorar</button>
+        <button  className="cta-btn"><Link to="/pontos-turisticos" className="nav-link">Explorar</Link></button>
       </div>
     </div>
    

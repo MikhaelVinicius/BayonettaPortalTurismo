@@ -16,7 +16,7 @@
   letter-spacing: 2px;
   text-decoration: none;
   color: #fff;
-  margin-left: 600px;
+
  
 }
 
@@ -30,4 +30,10 @@ nav{
 
 a.nav-link:hover{
 color: blue;
+}
+
+img.logo{
+  max-width: 70px;
+  max-height: 70px;
+ 
 }
