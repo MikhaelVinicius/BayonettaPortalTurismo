@@ -4,7 +4,7 @@ import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
 import Footer from '../components/footer';
 import Nav from '../components/Nav'; 
-
+import evento from "../logos/evento.png";
 
 
 function EventoList() {
@@ -33,7 +33,10 @@ function EventoList() {
            <header>
           <Nav /> 
         </header>
-          <h1>Eventos</h1>
+        <div>
+      <h1>Eventos</h1>
+      <img className='logo' src={evento} alt="" />
+      </div>
           {eventos.map(evento => (
             <div className="pt-card" key={evento.id}>
               <img src={evento.imagem1} alt={evento.nome} />

@@ -4,6 +4,7 @@ import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav'; 
 import Footer from '../components/footer';
+import restaurante from "../logos/restaurante.png";
 
 function RestauranteList() {
     const [restaurantes, setRestaurantes] = useState([]);
@@ -30,7 +31,10 @@ function RestauranteList() {
         <header>
         <Nav /> 
       </header>
-        <h1>Restaurantes</h1>
+      <div>
+      <h1>Restaurantes</h1>
+      <img className='logo' src={restaurante} alt="" />
+      </div>
         {restaurantes.map(restaurante => (
           <div className="pt-card" key={restaurante.id}>
             <img src={restaurante.imagem1} alt={restaurante.nome} />

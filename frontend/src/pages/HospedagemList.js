@@ -4,7 +4,7 @@ import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav'; 
 import Footer from '../components/footer';
-
+import hotel from "../logos/hotel.png";
 
 function HospedagemList() {
     const [hospedagens, setHospedagens] = useState([]);
@@ -31,7 +31,10 @@ function HospedagemList() {
          <header>
           <Nav /> 
         </header>
-        <h1>Hospedagens</h1>
+        <div>
+      <h1>Hospedagens</h1>
+      <img className='logo' src={hotel} alt="" />
+      </div>
         {hospedagens.map(hospedagem => (
           <div className="pt-card" key={hospedagem.id}>
             <img src={hospedagem.url_imagem_1} alt={hospedagem.nome} />

@@ -4,6 +4,7 @@ import '../CSS/Listagem.css';
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav'; 
 import Footer from '../components/footer';
+import pontos from "../logos/ponto.png";
 
 
 function PontoTuristicoList() {
@@ -31,7 +32,10 @@ function PontoTuristicoList() {
          <header>
         <Nav /> 
       </header>
-        <h1>Pontos turísticos</h1>
+      <div>
+      <h1>Pontos turísticos</h1>
+      <img className='logo' src={pontos} alt="" />
+      </div>
         {pontosTuristicos.map(pontoTuristico => (
           <div className="pt-card" key={pontoTuristico.id}>
             <img src={pontoTuristico.url_imagem_1} alt={pontoTuristico.nome} />
