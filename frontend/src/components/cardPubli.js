@@ -19,7 +19,7 @@ function CardPubli() {
   
      
     const limitarDescricao = (descricao) => {
-        const limite = 200;
+        const limite = 100;
         if (descricao.length > limite) {
           return descricao.slice(0, limite) + '...';
         }
@@ -35,7 +35,7 @@ function CardPubli() {
               <div className="cardbody">
                 <h2>{publi.nome}</h2>
                 <p>{limitarDescricao(publi.descricao)}</p>
-                <p>{publi.localizacao}</p>
+                
                 <Link to={`/publi/${publi.id}`} className="ctabtn">Ver mais</Link>
               </div>
             </div>

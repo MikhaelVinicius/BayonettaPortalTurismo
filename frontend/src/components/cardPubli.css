@@ -19,6 +19,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
+    margin-right: 5px;
   }
   
   .card img {
@@ -35,16 +36,17 @@
   .card h2 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     color: #000;
   }
   
   .card p {
-    font-size: 16px;
-    margin-bottom: 40px;
-   
+    font-size: 12px;
+    margin-bottom: 0px;
+    text-align: center;
     padding: 0;
     color: #000;
+    padding-bottom: 20px;
   }
   
   .card .ctabtn {
@@ -52,7 +54,7 @@
     color: #fff;
     border: none;
     padding: 10px 20px;
-    top: 30px;
+    top: 10px;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -60,8 +62,8 @@
     text-decoration: none;
     margin-bottom: 30px;
     margin-left: 10px;
-    margin-top: 10px;
-    bottom: 5px;
+    margin-top: 20px;
+    bottom: 20px;
     right: 20px;
     top: 10px;
     transition: all 0.3s ease-in-out;
