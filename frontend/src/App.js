@@ -14,6 +14,7 @@ import RestauranteDetalhe from './pages/RestauranteDetalhe';
 import PontoTuristicoDetalhe from './pages/PontoTuristicoDetalhe';
 import NoticiasList from './pages/NoticiasList';
 import NoticiaDetalhe from './pages/NoticiaDetalhe';
+import PubliDetalhe from './pages/PubliDetalhe';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/restaurantes/:id" component={RestauranteDetalhe} />
         <Route path="/pontos-turisticos/:id" component={PontoTuristicoDetalhe} />
         <Route path="/noticias/:id" component={NoticiaDetalhe} />
+        <Route path="/publi/:id" component={PubliDetalhe} />
       </Switch>
     </Router>
   );
