@@ -317,6 +317,31 @@ class Comentario(db.Model):
         }
 
 
+class Publi(db.Model):
+    __tablename__ = 'publi'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    nome = db.Column(db.String(255))
+    tipo = db.Column(db.String(255))
+    localizacao = db.Column(db.String(255))
+    descricao = db.Column(db.Text)
+    contato = db.Column(db.String(255))
+    imagem1 = db.Column(db.String(255))
+    imagem2 = db.Column(db.String(255))
+    imagem3 = db.Column(db.String(255))
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "nome": self.nome,
+            "tipo": self.tipo,
+            "localizacao": self.localizacao,
+            "descricao": self.descricao,
+            "contato": self.contato,
+            "imagem1": self.imagem1,
+            "imagem2": self.imagem2,
+            "imagem3": self.imagem3
+        }
+
 #############ROTAS###################
 
 
@@ -493,6 +518,19 @@ def get_noticia(id):
         return jsonify({'erro': 'Notícia não encontrada'}), 404
     return jsonify(noticia.to_dict())
 
+@app.route('/api/publi', methods=['GET'])
+def get_publi():
+    publi = Publi.query.all()
+    return jsonify([pub.to_dict() for pub in publi])
+
+@app.route('/api/publi/<int:id>', methods=['GET'])
+def get_publi_by_id(id):
+    pub = Publi.query.get(id)
+    if pub is None:
+        return jsonify({'error': 'Publicação não encontrada'}), 404
+    return jsonify(pub.to_dict())
+
+
 
 admin = Admin(app, name='Admin', template_mode='bootstrap3')
 admin.add_view(ModelView(PontoTuristico, db.session))
@@ -502,6 +540,8 @@ admin.add_view(ModelView(Restaurante, db.session))
 admin.add_view(ModelView(Hospedagem, db.session))
 admin.add_view(ModelView(Comentario, db.session))
 admin.add_view(ModelView(Noticia, db.session))
+admin.add_view(ModelView(Publi, db.session))
+
 
 if __name__ == '__main__':
     app.config['DEBUG'] = True
