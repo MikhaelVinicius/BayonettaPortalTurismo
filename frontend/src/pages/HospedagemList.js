@@ -41,7 +41,7 @@ function HospedagemList() {
             <div className="card-body">
               <h2>{hospedagem.nome}</h2>
            
-              <p>Estrelas: {hospedagem.estrelas}</p>
+              <p><i className="fas fa-star"></i>Estrelas: {hospedagem.estrelas}</p>
               <p>{limitarDescricao(hospedagem.descricao)}</p>
               <Link to={`/hospedagens/${hospedagem.id}`} className="cta-btn">Ver mais</Link>
             </div>
