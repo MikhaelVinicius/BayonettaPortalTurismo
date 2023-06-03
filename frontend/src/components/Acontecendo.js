@@ -39,7 +39,7 @@ function Acontecendo() {
               <h2>{noticias.titulo}</h2>
               <p>{limitarDescricao(noticias.descricao)}</p>
               <p>{noticias.data_postagem}</p>
-              <Link to={`/noticias/${noticias.id}`} className="cta-btn">Ver mais</Link>
+              <Link to={`/noticias/${noticias.id}`} className="cta-btn">Leia mais sobre</Link>
             </div>
           </div>
         ))}

@@ -7,6 +7,7 @@ import PontoTuristicoList from './PontoTuristicoList';
 import Footer from '../components/footer';
 import CardPubli from '../components/cardPubli';
 import Acontecendo from '../components/Acontecendo';
+import Contato from '../components/Contato';
 
 
 function Homepage() {
@@ -26,6 +27,7 @@ function Homepage() {
         <Nav /> 
       </header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <Contato/>
  
   <div class="carousel-inner">
     <div class="carousel-item active">
