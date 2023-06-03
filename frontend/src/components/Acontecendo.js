@@ -29,7 +29,8 @@ function Acontecendo() {
   
     return (
       <div>
-      <h1 className='tituloO'>Ocorrendo em Garanhuns</h1>
+      <h1 className='tituloO'> <div id="linha-horizontal"></div>Ocorrendo em Garanhuns <div id="linha-horizontal"></div></h1> 
+      <p className='subtitulo'>Fique atualizado sobre os eventos e acontecimentos da Suiça pernambucana</p>
       <div className="pt-list">
         {noticias.map(noticias => (
           <div className="pt-card" key={noticias.id}>
