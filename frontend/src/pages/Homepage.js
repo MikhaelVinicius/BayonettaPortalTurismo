@@ -6,6 +6,7 @@ import Nav from '../components/Nav';
 import PontoTuristicoList from './PontoTuristicoList';
 import Footer from '../components/footer';
 import CardPubli from '../components/cardPubli';
+import Acontecendo from '../components/Acontecendo';
 
 
 function Homepage() {
@@ -25,11 +26,7 @@ function Homepage() {
         <Nav /> 
       </header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
+ 
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img  class="d-block w-100 blur" src="https://mediaim.expedia.com/destination/1/255802739e639a1f610362ba2a9b30e8.jpg" alt="First slide"/>
@@ -46,7 +43,7 @@ function Homepage() {
    
   
   </div>
-  
+  <Acontecendo/>
  
 </div>
      
