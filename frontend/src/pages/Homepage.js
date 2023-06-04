@@ -9,7 +9,7 @@ import CardPubli from '../components/cardPubli';
 import Acontecendo from '../components/Acontecendo';
 import Contato from '../components/Contato';
 import Fazeres from '../components/Fazeres';
-
+import Parceiros from '../components/Parceiros';
 
 function Homepage() {
 
@@ -20,6 +20,7 @@ function Homepage() {
     pontoTuristicoListRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  
   
   
     return (
@@ -48,6 +49,7 @@ function Homepage() {
   </div>
   <Acontecendo/>
   <Fazeres/>
+  <Parceiros/>
 </div>
      
       <Footer/>
