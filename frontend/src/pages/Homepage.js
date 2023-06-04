@@ -8,6 +8,7 @@ import Footer from '../components/footer';
 import CardPubli from '../components/cardPubli';
 import Acontecendo from '../components/Acontecendo';
 import Contato from '../components/Contato';
+import Fazeres from '../components/Fazeres';
 
 
 function Homepage() {
@@ -46,7 +47,7 @@ function Homepage() {
   
   </div>
   <Acontecendo/>
- 
+  <Fazeres/>
 </div>
      
       <Footer/>
