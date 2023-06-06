@@ -28,6 +28,7 @@ function PontoTuristicoList() {
     }
   
     return (
+      <div>
       <div className="pt-list">
          <header>
         <Nav /> 
@@ -47,7 +48,8 @@ function PontoTuristicoList() {
             </div>
           </div>
         ))}
-        
+        </div>
+        <Footer/>
       </div>
     );
   }

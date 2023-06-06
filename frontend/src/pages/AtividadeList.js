@@ -29,6 +29,7 @@ function AtividadeList() {
   };
 
   return (
+    <div>
     <div className="pt-list">
     <header>
       <Nav /> 
@@ -49,7 +50,8 @@ function AtividadeList() {
           </div>
         </div>
       ))}
-      
+      </div>
+      <Footer/>
     </div>
   );
 }

@@ -27,6 +27,7 @@ function HospedagemList() {
       }
   
     return (
+      <div>
       <div className="pt-list">
          <header>
           <Nav /> 
@@ -47,7 +48,8 @@ function HospedagemList() {
             </div>
           </div>
         ))}
-        
+        </div>
+        <Footer/>
       </div>
     );
   }

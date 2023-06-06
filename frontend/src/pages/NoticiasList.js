@@ -28,6 +28,7 @@ function NoticiasList() {
     }
   
     return (
+      <div>
       <div className="pt-list">
          <header>
         <Nav /> 
@@ -47,7 +48,8 @@ function NoticiasList() {
             </div>
           </div>
         ))}
-        
+        </div>
+        <Footer/>
       </div>
     );
   }

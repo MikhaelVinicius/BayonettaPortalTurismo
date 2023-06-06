@@ -29,6 +29,7 @@ function EventoList() {
       }
   
     return (
+      <div>
         <div className="pt-list">
            <header>
           <Nav /> 
@@ -48,7 +49,8 @@ function EventoList() {
               </div>
             </div>
           ))}
-        
+        </div>
+        <Footer/>
         </div>
       );
     }

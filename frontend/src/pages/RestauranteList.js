@@ -27,6 +27,7 @@ function RestauranteList() {
       }
   
     return (
+      <div>
       <div className="pt-list">
         <header>
         <Nav /> 
@@ -46,7 +47,8 @@ function RestauranteList() {
             </div>
           </div>
         ))}
-       
+       </div>
+       <Footer/>
       </div>
     );
   }
