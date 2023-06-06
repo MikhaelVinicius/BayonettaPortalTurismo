@@ -5,7 +5,7 @@ import Nav from '../components/Nav';
 import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
 import Maps from '../components/Maps';
-
+import Parceiros from '../components/Parceiros';
 
 
 import $ from 'jquery';
@@ -55,6 +55,7 @@ function AtividadeDetalhes(props) {
 
 
   return (
+    <div>
     <div className="detalhes">
       <header>
         <Nav />
@@ -94,6 +95,10 @@ function AtividadeDetalhes(props) {
           <Comentarios />
         </div>
       </div>
+
+    </div>
+    <Parceiros/>
+    <Footer/>
     </div>
   );
 }

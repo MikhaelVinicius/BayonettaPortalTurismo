@@ -4,7 +4,7 @@ import '../CSS/Detalhes.css';
 import Nav from '../components/Nav'; 
 import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
-
+import Parceiros from '../components/Parceiros';
 import $ from 'jquery';
 import Maps from '../components/Maps';
 
@@ -49,6 +49,7 @@ function PontoTuristicoDetalhe(props) {
   }
 
   return (
+    <div>
     <div className="detalhes">
       <header>
         <Nav />
@@ -88,6 +89,9 @@ function PontoTuristicoDetalhe(props) {
         </div>
       </div>
       
+    </div>
+    <Parceiros/>
+    <Footer/>
     </div>
   );
 }

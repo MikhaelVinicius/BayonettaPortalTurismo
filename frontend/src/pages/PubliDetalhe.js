@@ -6,7 +6,7 @@ import Comentarios from '../components/comentarios';
 import Footer from '../components/footer';
 import Maps from '../components/Maps';
 import $ from 'jquery';
-
+import Parceiros from '../components/Parceiros';
 
 import  '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
@@ -46,6 +46,7 @@ function PubliDetalhe(props) {
   }
 
   return (
+    <div>
     <div className="detalhes">
       <header>
         <Nav /> 
@@ -80,7 +81,9 @@ function PubliDetalhe(props) {
       <Comentarios/>
       </div>
       </div>
-    
+      </div>
+      <Parceiros/>
+      <Footer/>
     </div>
   );
 }

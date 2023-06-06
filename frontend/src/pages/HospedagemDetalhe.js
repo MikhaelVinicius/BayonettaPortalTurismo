@@ -9,7 +9,7 @@ import  '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
 import '../../node_modules/slick-carousel/slick/slick.js';
 import Maps from '../components/Maps';
-
+import Parceiros from '../components/Parceiros';
 function HospedagemDetalhes(props) {
   const [hospedagem, setHospedagem] = useState(null);
    const slickRef = useRef(null);
@@ -44,6 +44,7 @@ function HospedagemDetalhes(props) {
   }
 
   return (
+    <div>
     <div className="detalhes">
       <header>
         <Nav /> 
@@ -93,6 +94,9 @@ function HospedagemDetalhes(props) {
       </div>
      
       
+    </div>
+    <Parceiros/>
+    <Footer/>
     </div>
   );
 }
