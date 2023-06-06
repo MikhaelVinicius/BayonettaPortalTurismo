@@ -33,10 +33,10 @@ function NoticiasList() {
          <header>
         <Nav /> 
       </header>
-      <div>
+   
       <h1>Notícias</h1>
       <img className='logo' src={pontos} alt="" />
-      </div>
+      
         {noticias.map(noticias => (
           <div className="pt-card" key={noticias.id}>
             <img src={noticias.imagem1} alt={noticias.titulo} />

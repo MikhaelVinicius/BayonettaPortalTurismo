@@ -33,10 +33,10 @@ function PontoTuristicoList() {
          <header>
         <Nav /> 
       </header>
-      <div>
+     
       <h1>Pontos turísticos</h1>
       <img className='logo' src={pontos} alt="" />
-      </div>
+     
         {pontosTuristicos.map(pontoTuristico => (
           <div className="pt-card" key={pontoTuristico.id}>
             <img src={pontoTuristico.url_imagem_1} alt={pontoTuristico.nome} />

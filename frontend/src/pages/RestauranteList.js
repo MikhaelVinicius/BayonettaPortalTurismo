@@ -32,10 +32,10 @@ function RestauranteList() {
         <header>
         <Nav /> 
       </header>
-      <div>
+     
       <h1>Restaurantes</h1>
       <img className='logo' src={restaurante} alt="" />
-      </div>
+     
         {restaurantes.map(restaurante => (
           <div className="pt-card" key={restaurante.id}>
             <img src={restaurante.imagem1} alt={restaurante.nome} />

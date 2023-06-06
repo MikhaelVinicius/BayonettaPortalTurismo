@@ -4,7 +4,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "./Nav.css"
 import axios from 'axios';
 import mapa from "../logos/mapa.png";
-
+import logo from "../logos/sitelogo.png";
 
 function Nav() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -30,7 +30,7 @@ function Nav() {
   return (
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style={{ backdropFilter: 'blur(5px)' }}>
       <div>
-      
+     
         <a class="titulo" href="/">Portal Garanhuns</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

@@ -34,10 +34,10 @@ function EventoList() {
            <header>
           <Nav /> 
         </header>
-        <div>
+        
       <h1>Eventos</h1>
       <img className='logo' src={evento} alt="" />
-      </div>
+      
           {eventos.map(evento => (
             <div className="pt-card" key={evento.id}>
               <img src={evento.imagem1} alt={evento.nome} />

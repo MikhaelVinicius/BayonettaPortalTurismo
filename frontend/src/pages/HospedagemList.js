@@ -32,10 +32,10 @@ function HospedagemList() {
          <header>
           <Nav /> 
         </header>
-        <div>
+        
       <h1>Hospedagens</h1>
       <img className='logo' src={hotel} alt="" />
-      </div>
+      
         {hospedagens.map(hospedagem => (
           <div className="pt-card" key={hospedagem.id}>
             <img src={hospedagem.url_imagem_1} alt={hospedagem.nome} />

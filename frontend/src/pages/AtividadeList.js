@@ -34,11 +34,10 @@ function AtividadeList() {
     <header>
       <Nav /> 
     </header>
+    <h1>Atividades</h1>
+    <img className='logo' src={atividade} alt="" />
     
-    <div>
-      <h1>Atividades</h1>
-      <img className='logo' src={atividade} alt="" />
-      </div>
+    
       {atividades.map(atividade => (
         <div className="pt-card" key={atividade.id}>
           <img src={atividade.url_imagem_1} alt={atividade.nome} />
